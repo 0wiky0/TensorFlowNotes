@@ -59,7 +59,7 @@ pip install tensorflow-gpu
 
 可以在 python环境的黑窗口中运行：
 
-![mark](http://oz12t0u5u.bkt.clouddn.com/blog/180411/C4aA5jJckj.png?imageslim)
+![mark](https://github.com/0wiky0/TensorFlowNotes/blob/master/screenshot/1.png?raw=true)
 
 无报错即表明以上环境皆安装成功，接下来可以准备正式开启TenserFlow之旅了。
 
@@ -93,7 +93,7 @@ pip install tensorflow-gpu
 
 TensorFlow 是一个编程系统, 使用图来表示计算任务. 图中的节点被称之为 *op* (operation 的缩写). 一个 op 获得 0 个或多个 `Tensor`, 执行计算, 产生 0 个或多个 `Tensor`. 每个 Tensor 是一个类型化的多维数组. 例如, 你可以将一小组图像集表示为一个四维浮点数数组, 这四个维度分别是 `[batch, height, width, channels]`.
 
-![mark](http://oz12t0u5u.bkt.clouddn.com/blog/180411/Ad1B689i2E.png?imageslim)
+![mark](https://github.com/0wiky0/TensorFlowNotes/blob/master/screenshot/2.png?raw=true)
 
 
 
