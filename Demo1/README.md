@@ -1,75 +1,4 @@
-# TensorFlowNotes
-面向普通开发者的机器学习入门
-
-## 环境搭建
-
-- 操作系统：以Window 64bit 为例（Window、MacOS、Linux都以支持TensorFlow安装）
-- python环境搭建
-- TensorFlow安装
-
-### python环境搭建
-
-> 注意： 目前Window用户只能使用python3.5（64bit）。MacOS，Linux支持python2.7和python3.3+
-
-具有python基础的可以跳过这一步（如果是Window环境，需要注意对应版本）。
-
-无python基础的强烈推荐使用Anaconda（可以认为是python的集成环境）进行搭建：
-
-- [下载地址](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/ )，Anaconda3_4.2.0 对应 python3.5
-
-- Window下安装 Anaconda 后(过程略)，会自动将相关路径添加至环境变量中
-- （新起的）命令行窗口中输入：conda list 可以查看已集成好的一些环境，如Python、Pip
-- 如果你没有比较熟悉的用于开发Python的IDE，可以先使用自带的：[Jupyter Notebook](https://zhuanlan.zhihu.com/p/33105153)（在安装目录的子目录Scripts中即可找到）
-
-
-
-知识点：要求了解 Anaconda 、 Pip、Jupyter Notebook 的基本使用
-
-
-
-### TensorFlow安装
-
-Windows 环境下安装
-
-- CPU版本
-
-  “黑窗口”中运行指令：
-
-```
-pip install tensorflow
-```
-
-
-
-- GPU版本
-
-  “黑窗口”中运行指令：
-
-```
-pip install tensorflow-gpu
-```
-
-
-
-由于GPU版本还需要进行对应环境的支持，因此对于入门而言，我们仅安装CPU版本即可。
-
-
-
-## 环境验证
-
-可以在 python环境的黑窗口中运行：
-
-![mark](http://oz12t0u5u.bkt.clouddn.com/blog/180411/C4aA5jJckj.png?imageslim)
-
-无报错即表明以上环境皆安装成功，接下来可以准备正式开启TenserFlow之旅了。
-
-
-
----
-
-
-
-##前提条件和准备工作
+# 前提条件和准备工作
 
 [参照官方对于机器学习入门的建议](https://developers.google.cn/machine-learning/crash-course/prereqs-and-prework)
 
@@ -77,7 +6,7 @@ pip install tensorflow-gpu
 
 
 
-## TensorFlow 基本概念
+# TensorFlow 基本概念
 
 [官方中文文档](http://wiki.jikexueyuan.com/project/tensorflow-zh/get_started/basic_usage.html)， 以下内容为个人笔记（概要）
 
@@ -97,9 +26,9 @@ TensorFlow 是一个编程系统, 使用图来表示计算任务. 图中的节�
 
 
 
-## 先看Demo
+# 先看Demo
 
-### 构建并启动图
+## 构建并启动图
 
 ```
 import tensorflow as tf
@@ -124,7 +53,7 @@ with tf.Session() as sess:
 
 - 启动图 ： 构造阶段完成后, 才能启动图. 启动图的第一步是创建一个 `Session` 对象, 如果无任何创建参数, 会话构造器将启动默认图.
 
-### 常量与变量
+## 常量与变量
 
 ```
 # 创建常量 op
@@ -147,7 +76,7 @@ with tf.Session() as sess:
 
 
 
-### 加减乘除
+## 加减乘除
 
 这里要求我们掌握 tf 的运算方法的用时，要求我们对矩阵运算有基本的了解，[参考资料](http://www2.edu-edu.com.cn/lesson_crs78/self/j_0022/soft/ch0605.html)。另外，代数相关知识建议看[deeplearning 第二章](https://github.com/exacity/deeplearningbook-chinese)
 
@@ -176,9 +105,9 @@ tf.subtract([[3,3],[4,4]],[[2,1],[2,2]])   # [[1 2]  [2 2]]
 tf.matmul([[3,3],[4,4]],[[2,1],[2,2]])     # [[12  9]  [16 12]]
 ```
 
-### 
+###  
 
-#### 类型转换
+### 类型转换 
 
 函数
 
