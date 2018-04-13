@@ -69,7 +69,7 @@ pip install tensorflow-gpu
 
 
 
-##前提条件和准备工作
+## 前提条件和准备工作
 
 [参照官方对于机器学习入门的建议](https://developers.google.cn/machine-learning/crash-course/prereqs-and-prework)
 
