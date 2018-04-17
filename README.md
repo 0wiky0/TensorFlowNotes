@@ -118,7 +118,7 @@ with tf.Session() as sess:
     print(result)
 ```
 
-- 构建图 ：的第一步, 是创建源 op (source op). 源 op 不需要任何输入, 例如 `常量 (Constant)`. 源 op 的输出被传递给其它 op 做运算.
+- 构建图 ：构建图的第一步, 是创建源 op (source op). 源 op 不需要任何输入, 例如 `常量 (Constant)`. 源 op 的输出被传递给其它 op 做运算.
 
 
 
