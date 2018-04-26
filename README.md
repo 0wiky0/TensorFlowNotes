@@ -69,7 +69,7 @@ pip install tensorflow-gpu
 
 
 
-##前提条件和准备工作
+## 前提条件和准备工作
 
 [参照官方对于机器学习入门的建议](https://developers.google.cn/machine-learning/crash-course/prereqs-and-prework)
 
@@ -128,7 +128,11 @@ with tf.Session() as sess:
     print(result)
 ```
 
+<<<<<<< HEAD
 - 构建图 ：第一步, 是创建源 op (图中节点). 源 op 不需要任何输入, 例如 `常量 (Constant)`. 源 op 的输出被传递给其它 op 做运算.
+=======
+- 构建图 ：构建图的第一步, 是创建源 op (source op). 源 op 不需要任何输入, 例如 `常量 (Constant)`. 源 op 的输出被传递给其它 op 做运算.
+>>>>>>> 8ef1c27f1edfe9f89177464be883125f3bd740ce
 
 
 
