@@ -167,7 +167,7 @@ with tf.Session() as sess:
 
 #### 加减乘除
 
-这里要求我们掌握 tf 的运算方法的用时，要求我们对[矩阵运算](http://www2.edu-edu.com.cn/lesson_crs78/self/j_0022/soft/ch0605.html)有基本的了解](http://www2.edu-edu.com.cn/lesson_crs78/self/j_0022/soft/ch0605.html)。另外，代数相关知识建议看[deeplearning 第二章](https://github.com/exacity/deeplearningbook-chinese)
+这里要求我们掌握 tf 的运算方法的用时，要求我们对[矩阵运算](http://www2.edu-edu.com.cn/lesson_crs78/self/j_0022/soft/ch0605.html)有基本的了解。另外，代数相关知识建议看[deeplearning 第二章](https://github.com/exacity/deeplearningbook-chinese)
 
 - 标量 （Scalar） ：一个单独的数
 - 向量 （Vector） ：一列数
@@ -373,7 +373,9 @@ with tf.Session() as sess:
 
 
 
-参考资料
+
+
+## 参考资料
 
 [[1] 官方机器学习速成课程](https://developers.google.com/machine-learning/crash-course/reducing-loss/gradient-descent?hl=zh-cn)（中文）
 
@@ -381,7 +383,7 @@ with tf.Session() as sess:
 
 [[3] tensorflow (视频) --- 炼数成金](https://www.youtube.com/watch?v=eAtGqz8ytOI&list=PLjSwXXbVlK6IHzhLOMpwHHLjYmINRstrk&index=1) (需要科学上网) 
 
-[4] 《Tensorflow 实战Google深度学习框架》 --- 郑泽宇 / 顾思宇 
+[[4] 《Tensorflow 实战Google深度学习框架》 --- 郑泽宇 / 顾思宇](https://www.zhihu.com/question/57065935) 
 
 [[5] 《Deep Learning 中文翻译》](https://github.com/exacity/deeplearningbook-chinese)
 
