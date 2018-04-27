@@ -51,7 +51,7 @@ pip install tensorflow-gpu
 
 
 
-由于GPU版本还需要进行对应环境的支持，因此对于入门而言，我们仅安装CPU版本即可。
+由于GPU版本还需要进行对应环境的支持，因此暂不在本篇文章说明，我们仅安装CPU版本即可。
 
 
 
@@ -113,20 +113,22 @@ TensorFlow 是一个编程系统, 使用图来表示计算任务. 图中的节�
 ```
 import tensorflow as tf
 
-# 创建常量 op
+# 创建常量 op (图中节点)
 m1 = tf.constant([[3,3]])    # 一行两列矩阵 ：（3  3）
 m2 = tf.constant([[2],[3]])  # 两行一列矩阵
 
 # 创建一个矩阵乘法op， 把m1和m2传入
 product = tf.matmul(m1,m2)   
 
-print(product) # 得到一个Tensor对象：Tensor("MatMul:0", shape=(1, 1), dtype=int32)
+# 得到一个Tensor对象：Tensor("MatMul:0", shape=(1, 1), dtype=int32)。形状为一行一列的矩阵
+print(product) 
 
 # 定义一个会话，启动默认的图 (常用写法,无需手动关闭会话)
 with tf.Session() as sess:
     # 执行以上的op
     result = sess.run(product)
-    print(result)
+    print(result)  # 输出为：[[15]]。 注意： 运行'product' 才真正进行数值计算得到结果
+    
 ```
 
 
@@ -165,7 +167,7 @@ with tf.Session() as sess:
 
 #### 加减乘除
 
-这里要求我们掌握 tf 的运算方法的用时，要求我们对矩阵运算有基本的了解，[参考资料](http://www2.edu-edu.com.cn/lesson_crs78/self/j_0022/soft/ch0605.html)。另外，代数相关知识建议看[deeplearning 第二章](https://github.com/exacity/deeplearningbook-chinese)
+这里要求我们掌握 tf 的运算方法的用时，要求我们对[矩阵运算](http://www2.edu-edu.com.cn/lesson_crs78/self/j_0022/soft/ch0605.html)有基本的了解](http://www2.edu-edu.com.cn/lesson_crs78/self/j_0022/soft/ch0605.html)。另外，代数相关知识建议看[deeplearning 第二章](https://github.com/exacity/deeplearningbook-chinese)
 
 - 标量 （Scalar） ：一个单独的数
 - 向量 （Vector） ：一列数
@@ -346,9 +348,9 @@ with tf.Session() as sess:
 
 ### 优化器(optimizer)
 
-我们接下来的目标就是使损失函数的值"最小"，那么演员---优化器(optimizer) 上场。TensorFlow 为我们封装了很多优化器， 比如我们代码中使用的就是梯度下降算法优化器（GradientDescentOptimizer）。关于梯度下降打个比方：可以理解为，将函数比作一座山，我们站在某个山坡上，往四周看，找到最快下山的途径，当然这个“最快”可能只是局部最优解。
+我们接下来的目标就是使损失函数的值"最小"，那么演员---优化器(optimizer) 上场。TensorFlow 为我们封装了很多优化器， 比如我们代码中使用的就是梯度下降算法优化器（GradientDescentOptimizer）。关于梯度下降打个比方：假设我们站在某个山坡上，梯度下降算法就可以帮助我们找到最快下山的途径，当然这个“最快”可能只是局部最优解。
 
-
+![mark](https://github.com/0wiky0/TensorFlowNotes/blob/master/screenshot/6.gif?raw=true)
 
 另外，梯度下降相关可以观看 Andrew Ng 课程： [监督学习应用.梯度下降](http://open.163.com/movie/2008/1/B/O/M6SGF6VB4_M6SGHJ9BO.html)。 这节课（26:15 开始讲梯度下降）中同样介绍了损失函数相关概念，如果你对深度学习有浓厚兴趣，强烈建议观看这系列课程。顺带扯几句：该系列课程，主要是介绍了深度学习的相关概念，并且带着一步步推导相关算法，推导过程可能比较费时费力，所以你也可以选择先把整体概念过一遍后，根据实际需要慢慢啃这些算法。
 
@@ -368,3 +370,23 @@ with tf.Session() as sess:
 
 
 以上部分即为最简单的一个“实战”了。主要概念是：损失函数、优化器。 
+
+
+
+参考资料
+
+[[1] 官方机器学习速成课程](https://developers.google.com/machine-learning/crash-course/reducing-loss/gradient-descent?hl=zh-cn)（中文）
+
+[[2] Tenserflow 教程系列(视频) --- 莫烦 ](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/)
+
+[[3] tensorflow (视频) --- 炼数成金](https://www.youtube.com/watch?v=eAtGqz8ytOI&list=PLjSwXXbVlK6IHzhLOMpwHHLjYmINRstrk&index=1) (需要科学上网) 
+
+[4] 《Tensorflow 实战Google深度学习框架》 --- 郑泽宇 / 顾思宇 
+
+[[5] 《Deep Learning 中文翻译》](https://github.com/exacity/deeplearningbook-chinese)
+
+[[6] 机器学习的动机与应用 --- Andrew Ng](http://open.163.com/movie/2008/1/M/C/M6SGF6VB4_M6SGHFBMC.html)
+
+
+
+> 简要说明： [1] 官方课程，带你快速过一遍机器学习的相关概念，个人觉得效果一般（结合其它教程服用可能效果更佳）。[2]、[3]、[4] 都是的 TensorFlow 入门教程，自行选择一个进行学习（个人做法是先学完一个，再借助另外两个进行回顾和知识点补充）。[5]  深度学习圣经 : )  。[6] 斯坦福大学公开课，大佬’网红‘不解释。 [2、3、4]偏重工程实践，[5、6]偏重基础概念、理论讲解，个人认为没有严格的前后顺序，大可进行交叉学习。
